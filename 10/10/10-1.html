@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Math Operations</title>
+</head>
+<body>
+    <script>
+        function performMathOperation() {
+            const num1 = parseFloat(prompt("Enter the first number:"));
+            const num2 = parseFloat(prompt("Enter the second number:"));
+            const operation = prompt("Enter the operation (+, -, *, /):");
+
+            let result;
+
+            switch (operation) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    if (num2 === 0) {
+                        alert("Error: Cannot divide by zero!");
+                        return;
+                    }
+                    result = num1 / num2;
+                    break;
+                default:
+                    alert("Invalid operation entered!");
+                    return;
+            }
+
+            alert("Result: " + result);
+        }
+    </script>
+
+    <h1>Math Operations</h1>
+    <button onclick="performMathOperation()">Perform Operation</button>
+</body>
+</html>

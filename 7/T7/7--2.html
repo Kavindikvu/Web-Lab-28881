@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Mark Calculator</title>
+</head>
+<body>
+    <script>
+        function calculateAverage() {
+            const marks = [];
+            let total = 0;
+
+            for (let i = 1; i <= 5; i++) {
+                const mark = parseFloat(prompt(`Enter mark ${i}:`));
+                marks.push(mark);
+                total += mark;
+            }
+
+            const average = total / 5;
+            return average;
+        }
+
+        function displayGrade() {
+            const average = calculateAverage();
+            if (average > 30) {
+                alert("Congrats! You passed");
+            } else {
+                alert("Better luck next time");
+            }
+        }
+    </script>
+
+    <h1>Mark Calculator</h1>
+    <button onclick="displayGrade()">Calculate Grade</button>
+</body>
+</html>
